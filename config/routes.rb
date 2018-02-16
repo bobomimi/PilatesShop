@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'products/index'
+  get 'products/reformer'
 
   resources :contacts, only: [:new, :create]
   root 'welcome#index'
