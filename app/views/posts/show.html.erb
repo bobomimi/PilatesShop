@@ -28,7 +28,7 @@
           <hr>
 
           <!-- Date/Time -->
-          <p>Posted on January 1, 2017 at 12:00 PM</p>
+          <p>Posted on <%= @post.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
 
           <hr>
 
