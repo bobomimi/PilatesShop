@@ -62,3 +62,5 @@ gem 'font-awesome-sass', '~> 5.0.6'
 gem 'mail_form', '~> 1.7'
 
 gem 'rails_12factor', group: :production
+
+gem "paperclip", "~> 5.2.1"

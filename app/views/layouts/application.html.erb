@@ -12,46 +12,28 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-      <%= link_to 'Daniel Pilates', root_path, class: "navbar-brand" %>
+      <strong><%= link_to 'Daniel Pilates', root_path, class: "navbar-brand" %></strong>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <%= link_to 'About', welcome_about_path, class: "nav-link" %>
+            <h6><strong><%= link_to 'About', welcome_about_path, class: "nav-link" %></strong></h6>
+            <li>
+            <li class="nav-item">
+              
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
+            <h6><strong><%= link_to 'Contact', new_contact_path, class: "nav-link" %></strong></h6>
             </li>
             <li class="nav-item">
-            <%= link_to 'Contact', new_contact_path, class: "nav-link" %>
+            <h6><strong><%= link_to 'Products', products_index_path, class: "nav-link" %></strong></h6>
             </li>
             <li class="nav-item">
-            <%= link_to 'products', products_index_path, class: "nav-link" %>
+            <h6><strong><%= link_to 'Blog', posts_path, class: "nav-link" %></strong></h4>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Blog
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Other Pages
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-                <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="404.html">404</a>
-                <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-              </div>
-            </li>
+           
           </ul>
         </div>
       </div>
