@@ -64,3 +64,7 @@ gem 'mail_form', '~> 1.7'
 gem 'rails_12factor', group: :production
 
 gem "paperclip", "~> 5.2.1"
+
+gem 'devise'
+
+gem 'friendly_id', '~> 5.1.0'

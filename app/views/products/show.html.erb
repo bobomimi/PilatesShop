@@ -1,4 +1,6 @@
-<!-- Page Content -->
+<p id="notice"><%= notice %></p>
+
+ <!-- Page Content -->
     <div class="container">
 
       <div class="row">
@@ -16,14 +18,15 @@
         <div class="col-lg-9">
 
           <div class="card mt-4">
-            <img class="card-img-top img-fluid" src="https://i.imgur.com/hAMIe3n.png" alt="">
+
+            <%= image_tag @product.image.url, class: "card-img-top img-fluid" %>
             <div class="card-body">
-              <h3 class="card-title">Product Name</h3>
-              <h4>$24.99</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+              <h3 class="card-title"><%= @product.title %></h3>
+              <h4>$<%= @product.price %></h4>
+              <p class="card-text"><%= @product.description %></p>
               <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
               4.0 stars
-            </div>
+            </div><% if user_signed_in? %><%= link_to 'Edit', edit_product_path(@product) %><% end %>
           </div>
           <!-- /.card -->
 

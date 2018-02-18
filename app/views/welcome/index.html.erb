@@ -41,7 +41,6 @@
       </div>
     </header>
 
-    <!-- Page Content -->
     <div class="container">
 
       <h1 class="my-4">Welcome to Modern Business</h1>
@@ -198,6 +197,9 @@
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        <% if user_signed_in? %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+            <% end %>
       </div>
       <!-- /.container -->
     </footer>
