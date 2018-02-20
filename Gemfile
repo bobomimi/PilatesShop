@@ -65,6 +65,8 @@ gem 'rails_12factor', group: :production
 
 gem "paperclip", "~> 5.2.1"
 
+gem 'aws-sdk', '~> 2.3'
+
 gem 'devise'
 
 gem 'friendly_id', '~> 5.1.0'
