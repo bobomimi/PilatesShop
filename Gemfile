@@ -75,3 +75,5 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 
 gem 'figaro'
+
+gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
