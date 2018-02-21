@@ -3,5 +3,4 @@ class Post < ApplicationRecord
   friendly_id :title, use: :slugged
   has_attached_file :image, styles: { large: "600x600", medium: "300x300>", thumb: "100x100#{}>", blog: "900x300" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
-  s3_region: ENV["us-east-2"]
 end
