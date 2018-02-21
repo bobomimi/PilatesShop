@@ -98,4 +98,14 @@ Rails.application.configure do
     s3_region: ENV.fetch('us-east-2'),
   }
 }
+
+config.paperclip_defaults = {
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('pilatesshopp'),
+    access_key_id: ENV.fetch('AKIAIACBMNKU7BB5OYLA'),
+    secret_access_key: ENV.fetch('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'),
+    s3_region: ENV.fetch('eu-irland'),
+  }
+}
 end
