@@ -89,11 +89,12 @@ group :test do
   gem 'stripe-ruby-mock'
 end
 
-
 gem 'config'
 
 gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 
 gem 'metamagic'
 
+gem 'hypermicrodata'
 
+gem 'haml'

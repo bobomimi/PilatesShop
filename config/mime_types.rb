@@ -1,0 +1,1 @@
+Mime::Type.register 'application/vnd.amundsen-uber+json', :uberjson

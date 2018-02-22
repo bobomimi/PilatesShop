@@ -1,5 +1,20 @@
 <% title @post.title %>
 <% meta_description @post.sub_title.truncate(150, separator: ' ') %>
+<main class="post" itemid="<%= post_url(@post) %>" itemscope="<%= true %>" itemtype="http://schema.org/Post">
+  <div class="media">
+    <div class="media-image pull-left">
+      <% image_tag @post.image.url, alt: '', itemprop: 'image' %>
+    </div>
+    <div class="media-body">
+      <h1 class="media-heading">
+        <span itemprop="title">
+          <% @post.title %>
+        </span>
+      </h1>
+    </div>
+  </div>
+  <%= link_to 'collection', post_path, rel: 'collection', itemprop: 'isPartOf' %>
+</main>
 
 <!-- Page Content -->
     <div class="container">
@@ -58,7 +73,6 @@
 
       </div>
       <!-- /.row -->
-        <center><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&mobile_iframe=true&width=87&height=20&appId" width="87" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></center>
     </div>
     <!-- /.container -->
     <% if user_signed_in? %>
