@@ -1,112 +1,62 @@
-<p id="notice"><%= notice %></p>
 
+<!-- Page Content -->
     <div class="container">
 
-     
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">DonPilates Blog
+        <small>Everything you need to know about Pilates</small>
+      </h1>
 
-      <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
-        <% @posts.each do |post| %>
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <%=image_tag post.image.url, class: "card-img-top" %>
-            <div class="card-body">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Blog Home 2</li>
+      </ol>
+       
+      <!-- Blog Post -->
+      <% @posts.each do |post| %>
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <%= link_to post do %>
+                <%=image_tag post.image.url(:post_index), class: "img-fluid rounded" %>
+              <% end %>
+            </div>
+            <div class="col-lg-6">
               <h2 class="card-title"><%= post.title %></h2>
-              <p class="card-text"><%= post.body %></p>
-              <%= link_to 'Read More', post, class: "btn btn-primary" %> 
+              <p class="card-text"><%= post.sub_title %></p>
+              <%= link_to 'Read More', post, class: 'btn btn-primary' %>
               <% if user_signed_in? %>
               <%= link_to 'Edit', edit_post_path(post), class: "btn btn-primary" %></td>
               <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
               <%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
-              <% end %>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on <%= post.created_at.strftime("%B %d %Y, %l:%M%P") %>
+<% end %>
             </div>
           </div>
-        <% end %>
-         
-          <!-- Pagination -->
-          <ul class="pagination justify-content-center mb-4">
-            <%= will_paginate(@post, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
-          </ul>
-
         </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Search Widget -->
-          <div class="card mb-4">
-            <h5 class="card-header">Search</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Side Widget</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
+        <div class="card-footer text-muted">
+          Posted on <%= post.created_at.strftime("%B %d %Y, %l:%M%P") %>
         </div>
-
       </div>
-      <!-- /.row -->
+      <% end %>
+ 
+
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center mb-4">
+        <%= will_paginate(@post, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+      </ul>
 
     </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+    </div>
     <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
+</footer>
