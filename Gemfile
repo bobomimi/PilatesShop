@@ -95,3 +95,8 @@ gem 'config'
 gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 
 gem 'metamagic'
+
+
+gem 'nokogiri', '~> 1.8', '>= 1.8.2'
+
+gem 'mida', '~> 0.4.0'
