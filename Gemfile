@@ -79,3 +79,8 @@ gem 'figaro'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 
 gem 'social-share-button'
+
+gem 'stripe'
+
+gem 'stripe_event'
+  

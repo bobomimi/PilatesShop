@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :products
   resources :posts
-
-
+  resources :charges
   resources :contacts, only: [:new, :create]
   root 'welcome#index'
   get 'welcome/about'

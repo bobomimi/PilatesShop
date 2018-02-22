@@ -43,7 +43,7 @@
 
     <div class="container">
 
-      <h1 class="my-4">Welcome to Daniel Pilates</h1>
+      <h1 class="my-4"></h1>
 
       <!-- Marketing Icons Section -->
       <div class="row">
@@ -52,7 +52,7 @@
           <div class="card h-100">
             <h4 class="card-header"><%= post.title %></h4>
             <div class="card-body">
-              <p class="card-text"><%= post.body %></p>
+              <p class="card-text"><%= post.sub_title %></p>
             </div>
             <div class="card-footer">
               <%= link_to 'Read More', post, class: "btn btn-primary" %>
@@ -69,16 +69,7 @@
         
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Portfolio 3
-        <small>Subheading</small>
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Portfolio 3</li>
-      </ol>
+      
 
       <div class="row">
         <% @products.each do |product| %>

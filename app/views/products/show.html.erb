@@ -24,11 +24,10 @@
               <h3 class="card-title"><%= @product.title %></h3>
               <h4>$<%= @product.price %></h4>
               <p class="card-text"><%= @product.description %></p>
-              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-              4.0 stars
-            </div><% if user_signed_in? %><%= link_to 'Edit', edit_product_path(@product) %><% end %>
+  
           </div>
           <!-- /.card -->
+          
 
           <div class="card card-outline-secondary my-4">
             <div class="card-header">
