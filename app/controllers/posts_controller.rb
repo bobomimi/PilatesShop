@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       title: @meta_title,
       type:  @post.title,
       description: @post.sub_title,
-      image: @post.image(:thumb),  # this file should exist in /app/assets/images/logo.png
+      image: @post.image(:medium),  # this file should exist in /app/assets/images/logo.png
       url: @canonical_url
     }
   end
