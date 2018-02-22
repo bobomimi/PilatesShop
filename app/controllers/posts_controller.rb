@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 2)
-    @meta_title = meta_title 'Top Quality Hand Made Pilates Product'
   end
 
   # GET /posts/1

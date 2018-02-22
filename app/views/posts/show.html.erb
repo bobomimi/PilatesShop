@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<% title @post.title %>
+<% meta_description @post.body.truncate(150, separator: ' ') %>
 
 <!-- Page Content -->
     <div class="container">
@@ -7,7 +8,8 @@
       <h1 class="mt-4 mb-3"><%= @post.title %>
         </small>
       </h1>
-      <% meta_description @post.body.truncate(150, separator: ' ') %>
+      
+
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Home</a>

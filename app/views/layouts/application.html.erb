@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @meta_title ? @meta_title : ApplicationController::BRAND_NAME %></title>
+    <title> 
+    <% if yield(:title).present? %>
+        <%= yield(:title) %>
+    <% else %>
+        DonPilates | Pilates equipment | Pilates training 
+    <% end %>
+  </title>
+  <% if yield(:meta_description).present? %>
+    <meta name="description" content="<%= yield(:meta_description) %>" />
+  <% else %>
+    <meta name="description" content="Donpilates.com  pilates equipment, training and exercises for every level, videos, books and more. From Daniel Pilates." />
+  <% end %>
+
+    
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

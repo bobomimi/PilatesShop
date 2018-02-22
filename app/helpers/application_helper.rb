@@ -6,4 +6,5 @@ module ApplicationHelper
   def meta_description(blog_text)
     content_for(:meta_description) { blog_text }
   end
+
 end
