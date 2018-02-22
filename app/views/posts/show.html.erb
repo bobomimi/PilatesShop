@@ -25,8 +25,8 @@
           <!-- Preview Image 900x300-->
 
           <%= image_tag @post.image.url, class: "img-fluid rounded" %>
-
-
+         
+    
           <hr>
 
           <!-- Date/Time -->
@@ -54,12 +54,13 @@
 
       </div>
       <!-- /.row -->
-
+        <center><%= social_share_button_tag(@post.title) %></center>
     </div>
     <!-- /.container -->
     <% if user_signed_in? %>
 <%= link_to 'Edit', edit_post_path(@post) %>
     <% end %>
+
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">

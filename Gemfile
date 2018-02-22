@@ -77,3 +77,5 @@ gem 'bootstrap-will_paginate'
 gem 'figaro'
 
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
+
+gem 'social-share-button'
