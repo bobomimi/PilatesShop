@@ -93,3 +93,5 @@ end
 gem 'config'
 
 gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+
+gem 'metamagic'
