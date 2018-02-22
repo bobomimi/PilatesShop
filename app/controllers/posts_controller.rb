@@ -11,6 +11,12 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @og_properties = {
+      title: @meta_title,
+      type:  'website',
+      image: view_context.image_url('image.png'),  # this file should exist in /app/assets/images/logo.png
+      url: @canonical_url
+    }
   end
 
   # GET /posts/new

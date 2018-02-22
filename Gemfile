@@ -88,3 +88,8 @@ gem 'stripe_event'
 group :test do
   gem 'stripe-ruby-mock'
 end
+
+
+gem 'config'
+
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
