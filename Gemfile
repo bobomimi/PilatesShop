@@ -83,3 +83,8 @@ gem 'social-share-button'
 gem 'stripe'
 
   
+gem 'stripe_event'
+  
+group :test do
+  gem 'stripe-ruby-mock'
+end
