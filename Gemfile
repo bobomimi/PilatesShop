@@ -82,5 +82,4 @@ gem 'social-share-button'
 
 gem 'stripe'
 
-gem 'stripe_event'
   
