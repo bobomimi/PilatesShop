@@ -98,7 +98,4 @@ gem 'metamagic'
 gem 'hypermicrodata'
 
 
-gem 'actionpack-action_caching'
-
-gem 'dalli'
-gem 'memcachier'
+gem 'faker'

@@ -1,4 +1,4 @@
-
+<% cache @post do %>
 <!-- Page Content -->
     <div class="container">
 
@@ -45,7 +45,7 @@
 
       <!-- Pagination -->
       <ul class="pagination justify-content-center mb-4">
-       <!-- <%= will_paginate(@post, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>-->
+        <%= will_paginate(@post, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
       </ul>
 
     </div>
@@ -60,3 +60,4 @@
     </div>
     <!-- /.container -->
 </footer>
+<% end %>

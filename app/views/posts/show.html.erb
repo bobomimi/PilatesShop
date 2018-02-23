@@ -1,3 +1,4 @@
+<% cache @post do %>
 <% title @post.title %>
 <% meta_description @post.sub_title.truncate(150, separator: ' ') %>
 <main class="post" itemid="<%= post_url(@post) %>" itemscope="<%= true %>" itemtype="http://schema.org/Post">
@@ -13,7 +14,7 @@
       </h1>
     </div>
   </div>
-  <% link_to 'Blog', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
+  <% link_to '', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
 </main>
 <!-- Page Content -->
     <div class="container">
@@ -80,3 +81,4 @@
       </div>
       <!-- /.container -->
 </footer>
+<% end %>

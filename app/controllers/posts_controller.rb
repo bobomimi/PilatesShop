@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Rails.all_cached
+    @posts = Post.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /posts/1

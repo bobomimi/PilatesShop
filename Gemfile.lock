@@ -37,8 +37,6 @@ GEM
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionpack-action_caching (1.2.0)
-      actionpack (>= 4.0.0, < 6)
     actionview (5.1.5)
       activesupport (= 5.1.5)
       builder (~> 3.1)
@@ -106,7 +104,6 @@ GEM
       deep_merge (~> 1.2.1)
       dry-validation (>= 0.10.4)
     crass (1.0.3)
-    dalli (2.7.6)
     dante (0.2.0)
     deep_merge (1.2.1)
     devise (4.4.1)
@@ -146,6 +143,8 @@ GEM
       dry-types (~> 0.12.0)
     erubi (1.7.0)
     execjs (2.7.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.21)
@@ -199,7 +198,6 @@ GEM
       nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    memcachier (0.0.2)
     metamagic (3.1.7)
       rails (>= 3.0.0)
     method_source (0.9.0)
@@ -333,7 +331,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack-action_caching
   aws-sdk (~> 2.3)
   bootstrap-sass (~> 3.3, >= 3.3.7)
   bootstrap-will_paginate
@@ -342,8 +339,8 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   config
-  dalli
   devise
+  faker
   figaro
   font-awesome-sass (~> 5.0.6)
   friendly_id (~> 5.1.0)
@@ -352,7 +349,6 @@ DEPENDENCIES
   jquery-rails (~> 4.3, >= 4.3.1)
   listen (>= 3.0.5, < 3.2)
   mail_form (~> 1.7)
-  memcachier
   metamagic
   paperclip!
   pg (>= 0.18, < 2.0)
