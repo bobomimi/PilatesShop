@@ -4,5 +4,7 @@ class Post < ApplicationRecord
   has_attached_file :image, styles: { post_index: "750x300", large: "600x600", medium: "300x300>", thumb: "100x100#{}>" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   
-
+  def self.all_cached
+    Rails.cache.fetch('Post.all') { all.to_a }
+  end
 end
