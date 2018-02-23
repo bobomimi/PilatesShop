@@ -16,6 +16,11 @@
   </div>
   <% link_to '', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
 </main>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@donpilates">
+<meta name="twitter:title" content="<%= @post.title %>">
+<meta name="twitter:description" content="<%= @post.sub_title %>">
 <!-- Page Content -->
     <div class="container">
 
