@@ -7,10 +7,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-
-    @posts = Rails.cache.fetch('posts', expires_in: 5.minutes){
-    Post.paginate(:page => params[:page], :per_page => 2)
-    }
+    @posts = Rails.all_cached
   end
 
   # GET /posts/1
