@@ -1,6 +1,20 @@
 <% title @product.title %>
 <% meta_description @product.sub_title.truncate(150, separator: ' ') %>
-
+<main class="product" itemid="<%= product_url(@product) %>" itemscope="<%= true %>" itemtype="http://schema.org/Product">
+  <div class="media">
+    <div class="media-image pull-left">
+      <% image_tag @product.image.url, alt: '', itemprop: 'image' %>
+    </div>
+    <div class="media-body">
+      <h1 class="media-heading">
+        <span itemprop="title">
+          <% @product.title %>
+        </span>
+      </h1>
+    </div>
+  </div>
+  <% link_to 'Blog', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
+</main>
  <!-- Page Content -->
     <div class="container">
 

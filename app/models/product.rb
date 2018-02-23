@@ -10,4 +10,5 @@ class Product < ApplicationRecord
     (price * 100).to_i
   end
 
+
 end

@@ -1,12 +1,16 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  
   include Hypermicrodata::Rails::HtmlBasedJsonRenderer
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 2)
+
+    @posts = Rails.cache.fetch('posts', expires_in: 5.minutes){
+    Post.paginate(:page => params[:page], :per_page => 2)
+    }
   end
 
   # GET /posts/1

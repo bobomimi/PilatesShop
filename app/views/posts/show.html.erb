@@ -13,9 +13,8 @@
       </h1>
     </div>
   </div>
-  <%= link_to 'collection', post_path, rel: 'collection', itemprop: 'isPartOf' %>
+  <% link_to 'Blog', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
 </main>
-
 <!-- Page Content -->
     <div class="container">
 
@@ -23,8 +22,6 @@
       <h1 class="mt-4 mb-3"><%= @post.title %>
         </small>
       </h1>
-      
-      
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -41,18 +38,15 @@
           <!-- Preview Image 900x300-->
 
           <%= image_tag @post.image.url, class: "img-fluid rounded" %>
-         
-    
+
+
           <hr>
-          
+
           <!-- Date/Time -->
           <p>Posted on <%= @post.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
 
           <hr>
-           <h2 class="mt4 mb-3"><%= @post.sub_title %>
-            </small>
-          </h2>
-          <hr>
+
           <!-- Post Content -->
           <p class="lead"><%= @post.body %></p>
 
@@ -73,16 +67,16 @@
 
       </div>
       <!-- /.row -->
+
     </div>
     <!-- /.container -->
     <% if user_signed_in? %>
 <%= link_to 'Edit', edit_post_path(@post) %>
     <% end %>
-
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
       </div>
       <!-- /.container -->
-    </footer>
+</footer>

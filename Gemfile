@@ -97,4 +97,8 @@ gem 'metamagic'
 
 gem 'hypermicrodata'
 
-gem 'haml'
+
+gem 'actionpack-action_caching'
+
+gem 'dalli'
+gem 'memcachier'
