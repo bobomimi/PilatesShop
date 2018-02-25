@@ -21,3 +21,5 @@ module PilatesShop
     config.middleware.use Rack::Deflater
   end
 end
+
+config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
