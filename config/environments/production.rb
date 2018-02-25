@@ -112,4 +112,8 @@ Rails.application.configure do
     'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
   }
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+
+  config.assets.css_compressor = :yui
+  
+  config.assets.js_compressor = :uglifier
 end
