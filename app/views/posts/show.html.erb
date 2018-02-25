@@ -1,6 +1,6 @@
-<% cache @post do %>
+
 <% title @post.title %>
-<% meta_description @post.sub_title.truncate(150, separator: ' ') %>
+<% meta_description @post.sub_title %>
 <main class="post" itemid="<%= post_url(@post) %>" itemscope="<%= true %>" itemtype="http://schema.org/<%= post_url(@post) %>">
   <div class="media">
     <div class="media-image pull-left">
@@ -23,7 +23,7 @@
 <meta name="twitter:site" content="@donpilates">
 <meta name="twitter:title" content="<%= @post.title %>">
 <meta name="twitter:description" content="<%= @post.sub_title %>">
-<meta name="twitter:image" content="<%= image_tag @post.image.url, class: "img-fluid rounded" %>" />
+<meta name="twitter:image" content="<%= image_tag @post.image %>">
 
 <meta property="og:title" content="<%= @post.title %>">
 <meta property="og:type" content="<%= @post.sub_title %>">
@@ -35,7 +35,7 @@
 
 
 
-
+<% cache @post do %>
 
 <!-- Page Content -->
     <div class="container">
@@ -53,7 +53,7 @@
 
           <!-- Preview Image 900x300-->
 
-         <!-- <%= image_tag @post.image.url, class: "img-fluid rounded" %>-->
+         <%= image_tag @post.image.url, class: "img-fluid rounded" %>
 
 
           <hr>
