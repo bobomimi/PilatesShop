@@ -104,3 +104,4 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 
 gem 'therubyracer'
 
+gem 'yui-compressor', '~> 0.12.0'

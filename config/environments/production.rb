@@ -112,7 +112,6 @@ Rails.application.configure do
     'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
   }
 
-  config.assets.css_compressor = :yui
   
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
 end
