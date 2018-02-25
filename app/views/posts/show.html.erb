@@ -1,7 +1,7 @@
 <% cache @post do %>
 <% title @post.title %>
 <% meta_description @post.sub_title.truncate(150, separator: ' ') %>
-<main class="post" itemid="<%= post_url(@post) %>" itemscope="<%= true %>" itemtype="http://schema.org/Post">
+<main class="post" itemid="<%= post_url(@post) %>" itemscope="<%= true %>" itemtype="http://schema.org/<%= post_url(@post) %>">
   <div class="media">
     <div class="media-image pull-left">
       <% image_tag @post.image.url, alt: '', itemprop: 'image' %>
@@ -14,13 +14,24 @@
       </h1>
     </div>
   </div>
-  <% link_to '', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
+  <% link_to '', posts_path, rel: '', itemprop: 'isPartOf' %>
 </main>
+<meta name="Robots" content="index, follow">
+
+<meta name="Description" content="<%= @post.sub_title %>">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@donpilates">
 <meta name="twitter:title" content="<%= @post.title %>">
 <meta name="twitter:description" content="<%= @post.sub_title %>">
+
+<meta property="og:title" content="<%= @post.title %>">
+<meta property="og:type" content="<%= @post.sub_title %>">
+<meta property="og:url" content="<%= post_url(@post) %>">
+<meta property="og:image" content="<%= @post.image %>">
+
+<link rel="publisher" href="https://plus.google.com/104292292875264621592">
+
 <!-- Page Content -->
     <div class="container">
 
