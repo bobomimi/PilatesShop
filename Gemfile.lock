@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 32bc0c6702388549cb4b3f00f82afbc3798d6891
+  specs:
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
+GIT
   remote: https://github.com/jumph4x/canonical-rails.git
   revision: f18f38060aa44485c1edd126473336d31a4fd33f
   specs:
@@ -337,6 +345,7 @@ DEPENDENCIES
   byebug
   canonical-rails!
   capybara (~> 2.13)
+  ckeditor!
   coffee-rails (~> 4.2)
   config
   devise

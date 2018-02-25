@@ -99,3 +99,6 @@ gem 'hypermicrodata'
 
 
 gem 'faker'
+
+gem 'ckeditor', github: 'galetahub/ckeditor'
+

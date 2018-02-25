@@ -45,6 +45,7 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /posts/1
@@ -60,6 +61,9 @@ class PostsController < ApplicationController
       end
     end
   end
+
+
+
 
   # DELETE /posts/1
   # DELETE /posts/1.json
