@@ -102,3 +102,4 @@ gem 'faker'
 
 gem 'ckeditor', github: 'galetahub/ckeditor'
 
+gem 'therubyracer'
