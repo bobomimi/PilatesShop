@@ -61,4 +61,5 @@ Rails.application.configure do
       :s3_region => ENV['AWS_REGION']
     }
   }
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 end

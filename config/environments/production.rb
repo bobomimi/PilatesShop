@@ -111,5 +111,6 @@ Rails.application.configure do
     'Cache-Control' => "public, s-maxage=#{365.days.to_i}, maxage=#{180.days.to_i}",
     'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
   }
-
+  
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 end
