@@ -41,9 +41,8 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3"><%= @post.title %>
-        </small>
-      </h1>
+      <h1><%= @post.title %></h1>
+     
 
       
 
@@ -54,13 +53,13 @@
 
           <!-- Preview Image 900x300-->
 
-          <!--<%= image_tag @post.image.url, class: "img-fluid rounded" %>-->
+          <%= image_tag @post.image.url, class: "img-fluid rounded" %>
 
 
           <hr>
 
           <!-- Date/Time -->
-          
+          <h2><%= post.sub_title %></h2>
 
           <hr>
 
