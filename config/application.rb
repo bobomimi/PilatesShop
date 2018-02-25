@@ -16,3 +16,8 @@ module PilatesShop
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+module PilatesShop
+  class Application < Rails::Application
+    config.middleware.use Rack::Deflater
+  end
+end
