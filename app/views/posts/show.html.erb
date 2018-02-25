@@ -1,4 +1,4 @@
-
+<head>
 <% title @post.title %>
 <% meta_description @post.sub_title %>
 <main class="post" itemid="<%= post_url(@post) %>" itemscope="<%= true %>" itemtype="http://schema.org/<%= post_url(@post) %>">
@@ -31,17 +31,15 @@
 <meta property="og:image" content="<%= @post.image %>">
 
 <link rel="publisher" href="https://plus.google.com/104292292875264621592">
-
-
-
-
-<% cache @post do %>
+</head>
+<body>
+<%= cache @post do %>
 
 <!-- Page Content -->
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1><%= @post.title %></h1>
+      <H1><%= @post.title %></H1>
      
 
       
@@ -70,7 +68,18 @@
          <p>Posted on <%= @post.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
           
         
+          <center>
+          <a class="twitter-share-button" href="https://twitter.com/donpilates/">Tweet</a>
+          <a class="twitter-follow-button"
+          href="https://twitter.com/TwitterDev">
+          Follow @Donpilates</a>
 
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+          <g:plusone></g:plusone>
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+          <g:plus action="share"></g:plus>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F<%= post_url(@post) %>%2F&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </center>
           <!-- Side Widget -->
           <div class="card my-4">
             <h5 class="card-header">Side Widget</h5>
@@ -97,3 +106,4 @@
       <!-- /.container -->
 </footer>
 <% end %>
+</body>
