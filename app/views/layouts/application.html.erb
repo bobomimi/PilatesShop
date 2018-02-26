@@ -19,8 +19,8 @@
     <%= canonical_tag -%>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload',cache: 'cached/all' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', cache: 'cached/all' %>
 
     <%= metamagic %>
     <meta charset="utf-8">
