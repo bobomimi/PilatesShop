@@ -25,10 +25,10 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -111,7 +111,6 @@ Rails.application.configure do
     'Cache-Control' => "public, s-maxage=#{365.days.to_i}, maxage=#{180.days.to_i}",
     'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
   }
-
+  config.serve_static_assets = false
   
-  config.assets.js_compressor = Uglifier.new(harmony: true)
 end
