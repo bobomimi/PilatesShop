@@ -114,6 +114,6 @@ Rails.application.configure do
   config.serve_static_assets = false
   config.cache_store = :readthis_store, { expires_in: 10.minutes, namespace:
 'cache_ns', redis: { host: 'localhost', port: 6379, db: 0 }, driver: :hiredis }
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
-  
 end
