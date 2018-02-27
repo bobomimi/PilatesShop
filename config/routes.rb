@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
- 
+  devise_for :users, path: 'users', controllers: { sessions: "users/sessions"}
+  devise_for :admins, path: 'admins', controllers: { sessions: "admins/sessions"}
   mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
   resources :products
   resources :posts 
   resources :charges

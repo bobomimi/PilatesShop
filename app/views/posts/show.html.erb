@@ -78,7 +78,7 @@
           <g:plusone></g:plusone>
           <script src="https://apis.google.com/js/platform.js" async defer></script>
           <g:plus action="share"></g:plus>
-          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F<%= post_url(@post) %>%2F&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          
           </center>
           <!-- Side Widget -->
           <div class="card my-4">
@@ -95,8 +95,8 @@
 
     </div>
     <!-- /.container -->
-    <% if user_signed_in? %>
-<%= link_to 'Edit', edit_post_path(@post) %>
+    <% if admin_signed_in? %>
+      <%= link_to 'Edit', edit_post_path(@post) %>
     <% end %>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
