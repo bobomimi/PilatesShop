@@ -1,3 +1,4 @@
+
 <% title @product.title %>
 <% meta_description @product.sub_title.truncate(150, separator: ' ') %>
 <main class="product" itemid="<%= product_url(@product) %>" itemscope="<%= true %>" itemtype="http://schema.org/Product">
@@ -15,6 +16,7 @@
   </div>
   <% link_to 'Blog', posts_path, rel: 'collection', itemprop: 'isPartOf' %>
 </main>
+<% cache do %>
  <!-- Page Content -->
     <div class="container">
 
@@ -77,4 +79,4 @@
       </div>
       <!-- /.container -->
 </footer>
-
+<% end %>
