@@ -85,6 +85,10 @@
             <h5 class="card-header">Side Widget</h5>
             <div class="card-body">
               You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+              agghg
+              <% if admin_signed_in? %>
+                <%= link_to 'Edit', edit_post_path(@post) %>
+              <% end %>
             </div>
           </div>
 
@@ -95,9 +99,7 @@
 
     </div>
     <!-- /.container -->
-    <% if admin_signed_in? %>
-      <%= link_to 'Edit', edit_post_path(@post) %>
-    <% end %>
+    
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
