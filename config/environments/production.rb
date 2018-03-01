@@ -115,4 +115,6 @@ Rails.application.configure do
 
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
+  config.i18n.default_locale = :en
+
 end
