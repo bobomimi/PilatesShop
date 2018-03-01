@@ -74,21 +74,21 @@
             
             
             <li class="nav-item">
-              <%= link_to 'Blog', posts_path, class: "nav-link" %>
+              <%= link_to t('navbar.blog'), posts_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Product', products_path, class: "nav-link" %>
+              <%= link_to t('navbar.products'), products_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to 'About', welcome_about_path, class: "nav-link" %>
+              <%= link_to t('navbar.about'), welcome_about_path, class: "nav-link" %>
             <li>
             <li class="nav-item">
-              <%= link_to 'Contact', new_contact_path, class: "nav-link" %>
+              <%= link_to t('navbar.contact'), new_contact_path, class: "nav-link" %>
             </li>
             </li>
             <li class="nav-item">
             <% if admin_signed_in? %>
-              <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
+              <%= link_to t"Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
             <% end %>
             </li>
           </ul>
