@@ -71,7 +71,7 @@
       <!-- Page Heading/Breadcrumbs -->
       
 
-      <div class="row">
+     <div class="row">
         <% @products.each do |product| %>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
@@ -86,15 +86,17 @@
               </h4>
               <p class="card-text"><%= product.sub_title %></p>
               <p class="card-text"></p>
-              <% if user_signed_in? %>
-            <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
-            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-            <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+              <% if admin_signed_in? %>
+                <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+                <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
             <% end %>
             </div>
           </div>
         </div>
         <% end %>
+        
+      </div>
         
       </div>
 
