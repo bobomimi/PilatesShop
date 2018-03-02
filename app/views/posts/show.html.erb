@@ -18,12 +18,11 @@
 </main>
 <meta name="Robots" content="index, follow">
 
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@donpilates">
 <meta name="twitter:title" content="<%= @post.title %>">
 <meta name="twitter:description" content="<%= @post.sub_title %>">
-<meta name="twitter:image" content="<%= image_tag @post.image %>">
+<meta name="twitter:image" content="<%= @post.image %>">
 
 <meta property="og:title" content="<%= @post.title %>">
 <meta property="og:type" content="<%= @post.sub_title %>">
@@ -31,9 +30,10 @@
 <meta property="og:image" content="<%= @post.image %>">
 
 <link rel="publisher" href="https://plus.google.com/104292292875264621592">
+
 </head>
 <body>
-<%= cache do %>
+<% cache do %>
 
 <!-- Page Content -->
     <div class="container">

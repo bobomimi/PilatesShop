@@ -110,3 +110,4 @@ gem 'high_voltage', '~> 3.0.0'
 gem 'middleman'
 
 gem 'i18n'
+
