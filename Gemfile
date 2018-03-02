@@ -111,4 +111,3 @@ gem 'middleman'
 
 gem 'i18n'
 
-gem 'mobile-fu'
