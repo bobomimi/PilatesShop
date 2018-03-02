@@ -121,4 +121,6 @@ Rails.application.configure do
 
   config.assets.compress = true
 
+  config.action_controller.asset_host = 'd2k6uz2heicg39.cloudfront.net'
+
 end
