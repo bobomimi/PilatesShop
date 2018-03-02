@@ -176,6 +176,8 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (5.0.6.2)
       sass (>= 3.2)
+    font_assets (0.1.14)
+      rack
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     fssm (0.2.10)
@@ -437,6 +439,7 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-sass (~> 5.0.6)
+  font_assets
   friendly_id (~> 5.1.0)
   high_voltage (~> 3.0.0)
   hypermicrodata

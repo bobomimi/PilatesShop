@@ -121,6 +121,8 @@ Rails.application.configure do
 
   config.assets.compress = true
 
-  config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
+  if ENV['ASSET_HOST'].present?
+    config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
+  end
 
 end
