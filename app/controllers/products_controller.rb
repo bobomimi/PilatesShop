@@ -7,10 +7,12 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.paginate(:page => params[:page], :per_page => 6)
+    fresh_when(etag: @products, last_modified: @products.maximum(:updated_at))
   end
   # GET /products/1
   # GET /products/1.json
   def show
+    fresh_when(@products)
     @og_properties = {
       title: @meta_title,
       type:  @product.title,
@@ -18,6 +20,7 @@ class ProductsController < ApplicationController
       image: @product.image(:thumb),  # this file should exist in /app/assets/images/logo.png
       url: @canonical_url
     }
+    
   end
 
   # GET /products/new

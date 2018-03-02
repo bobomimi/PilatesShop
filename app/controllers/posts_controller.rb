@@ -8,11 +8,13 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 5)
+    fresh_when(etag: @posts, last_modified: @posts.maximum(:updated_at))
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    fresh_when(@posts)
     @og_properties = {
       title: @meta_title,
       type:  @post.title,
@@ -20,6 +22,7 @@ class PostsController < ApplicationController
       image: @post.image(:medium),  # this file should exist in /app/assets/images/logo.png
       url: @canonical_url
     }
+    
   end
 
   # GET /posts/new
