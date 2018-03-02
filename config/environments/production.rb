@@ -125,4 +125,9 @@ Rails.application.configure do
     config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
   end
 
+  config.public_file_server.enabled = true
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, max-age=31536000'
+  }
+
 end
