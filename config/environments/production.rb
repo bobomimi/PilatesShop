@@ -121,5 +121,6 @@ Rails.application.configure do
 
   config.assets.compress = true
 
+  config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
 
 end
