@@ -117,4 +117,6 @@ Rails.application.configure do
 
   config.i18n.default_locale = :en
 
+  config.public_file_server.enabled = true
+
 end
