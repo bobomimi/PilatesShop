@@ -109,3 +109,4 @@ gem 'yui-compressor', '~> 0.12.0'
 gem 'high_voltage', '~> 3.0.0'
 gem 'middleman'
 
+gem 'i18n'
