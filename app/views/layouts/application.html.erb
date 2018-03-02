@@ -52,7 +52,6 @@
          margin-bottom: 30px;
        }
 
-       
     </style>
   </head>
 
@@ -85,13 +84,27 @@
             <li class="nav-item">
               <%= link_to t('navbar.contact'), new_contact_path, class: "nav-link" %>
             </li>
+            <li class="nav-item">
+              
             </li>
             <li class="nav-item">
-            <% if admin_signed_in? %>
-              <%= link_to t"Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
-            <% end %>
+              
+            </li>
+            <li class="nav-item">
+              <% if admin_signed_in? %>
+                <%= link_to t"Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
+              <% end %>
             </li>
           </ul>
+          <% if I18n.locale == :es %>
+            <%= link_to url_for(locale: :en) do %>
+              <%= image_tag('https://i.imgur.com/gJ4pnTu.png', width: '23', height: '15.33', alt: 'English') %>
+            <% end %>
+          <% elsif %>
+            <%= link_to url_for(locale: :es) do %>
+              <%= image_tag('https://i.imgur.com/8e0tYiD.png', width: '23', height: '15.33', alt: 'English') %>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </nav>
