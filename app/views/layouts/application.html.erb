@@ -20,7 +20,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload',cache: 'cached/all' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', cache: 'cached/all' %>
+    
 
     <%= metamagic %>
     <meta charset="utf-8">
@@ -63,12 +63,12 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
       <%= link_to 'Daniel Pilates', root_path, class: "navbar-brand" %>
-            <%= link_to url_for(locale: :en) do %>
-              <%= image_tag('https://i.imgur.com/gJ4pnTu.png', width: '23', height: '15.33', alt: 'English') %>
-            <% end %>
-            <%= link_to url_for(locale: :es) do %>
-              <%= image_tag('https://i.imgur.com/8e0tYiD.png', width: '23', height: '15.33', alt: 'English') %>
-            <% end %>
+      <%= link_to url_for(locale: :en) do %>
+        <%= image_tag('https://i.imgur.com/gJ4pnTu.png', width: '23', height: '15.33', alt: 'English') %>
+      <% end %>
+      <%= link_to url_for(locale: :es) do %>
+        <%= image_tag('https://i.imgur.com/8e0tYiD.png', width: '23', height: '15.33', alt: 'English') %>
+      <% end %>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -115,4 +115,5 @@
   <% end %>
     <%= yield %>
   </body>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', cache: 'cached/all' %>
 </html>
