@@ -114,3 +114,4 @@ gem 'i18n'
 gem 'font_assets'
 
 gem 'rack-cors'
+
