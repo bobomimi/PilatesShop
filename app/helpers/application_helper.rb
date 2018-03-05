@@ -18,5 +18,6 @@ module ApplicationHelper
 
     tags.join.html_safe  # Remember in Ruby the last line is returned
   end
+  
 
 end

@@ -85,4 +85,7 @@ FriendlyId.defaults do |config|
   #     text.to_slug.normalize! :transliterations => [:russian, :latin]
   #   end
   # }
+  # Hack to override method should_generate_new_friendly_id 
+
+
 end

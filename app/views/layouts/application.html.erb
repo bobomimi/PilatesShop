@@ -56,16 +56,16 @@
   </head>
 
   <body>
-  
+   <% cache do %>
    <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
       <%= link_to 'Daniel Pilates', root_path, class: "navbar-brand" %>
       <%= link_to url_for(locale: :en) do %>
-        <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
+      <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
       <% end %>
       <%= link_to url_for(locale: :es) do %>
-        <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/products/images/000/000/001/original/spain.png?1520005015', width: '23', height: '15.33', alt: 'Spanish') %>
+      <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/products/images/000/000/001/original/spain.png?1520005015', width: '23', height: '15.33', alt: 'Spanish') %>
       <% end %>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -114,4 +114,5 @@
     <%= yield %>
   </body>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', cache: 'cached/all' %>
+  <% end %>
 </html>
