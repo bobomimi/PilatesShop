@@ -4,6 +4,10 @@ es:
     products: Productos
     about: Acerca
     contact: Contacto
+  welcome:
+    first_slide_title: Entrenamiento de Pilates
+    first_slide_description: entrena tu cuerpo y tu mente
+    reformers: Reformeros
   activerecord:
     errors:
       messages:
